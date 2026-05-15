@@ -44,5 +44,17 @@ Thumbs.db
 *.sqlite3
 *.db
 
+# Test cache
+.pytest_cache/
+htmlcov/
+.coverage
+
+# React build output
+frontend/dist/
+frontend/build/
+
+# Generated output files (don't commit test exports)
+*.xlsx
+backend/exports/
 # Data files (Optional: uncomment to ignore large downloaded PDFs)
 # data/sample_10k/*.pdf
