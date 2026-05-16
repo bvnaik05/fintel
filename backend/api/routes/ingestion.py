@@ -34,7 +34,8 @@ def process_pdf_pipeline(job_id: str, file_path: str, company_name: str):
             raise ValueError("Could not locate any financial statement pages in the PDF.")
             
         # 2. Regex Extraction (runs on all identified financial pages)
-        regex_result = extract_kpis_with_regex(pages, financial_pages)
+        financial_pages_dict = {p: pages[p] for p in financial_pages if p in pages}
+        regex_result = extract_kpis_with_regex(financial_pages_dict)
         
         # 3. Gemini LLM Extraction (target the core income statement page)
         # Note: In a 10-K, the Income Statement is often the 2nd financial page identified
