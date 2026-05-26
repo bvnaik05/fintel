@@ -56,5 +56,18 @@ frontend/build/
 # Generated output files (don't commit test exports)
 *.xlsx
 backend/exports/
+data/exports/
+data/temp/
+
+# Logs
+*.log
+
 # Data files (Optional: uncomment to ignore large downloaded PDFs)
 # data/sample_10k/*.pdf
+
+# Misc sensitive / generated
+*.pem
+*.key
+*.crt
+.vercel
+.netlify
